@@ -1,0 +1,56 @@
+characters:
+  dekar:
+    name: "Dekar Raviede"
+    description: |
+      First among the five Lune Knights of Heaven, Dekar Raviede conceals a
+      keen strategic and political mind behind a veneer of waggish insouciance.
+      He peppers his speech with street slang, but his outwardly sleepy eyes
+      don't miss a thing.
+  poya:
+    name: "Poya Kern"
+    description: |
+      A Knight Blade of Heaven, ex-wife to Aaron Wrenfall. Captain of the
+      Thirteenth Platoon, known as the "Rolling Jinx." A harsh woman with
+      little mercy in her, these days; though she and Aaron were deep in
+      love, once.
+cities:
+  gereval:
+    name: "Gereval"
+    description: |
+      Capital city of Andragar, Gereval is the most populous city in
+      Northrock, and is a major economic and cultural center.
+  ilium:
+    name: "Ilium"
+    description: |
+      A city of the Silver Coast, renowned for its cultural institutions. Ruled
+      by the political mastermind Noble Mercury.
+regions:
+  andragar:
+    name: "Andragar"
+    description: |
+      Ruled by the great dragon Dark Eternal, Andragar is a nation that
+      mixes free-market capitalism with subtle social controls to craft a
+      society that is dynamic, prosperous, and welcoming... to those who
+      color inside the lines. Andragar's expansionist tendencies make its
+      neighbors nervous.
+  silver_coast:
+    name: "The Silver Coast"
+    description: |
+      Ruled jointly by the Seven Stars of Fate, the Silver Coast controls the
+      western coastline of Northrock, monopolizing trade with the Lan'yaria
+      Republic. Considered the only serious counterbalance to Andragar's power
+      on the continent.
+groups:
+  heaven:
+    name: "Heaven"
+    description: |
+      Elite military force of Andragar. Heaven's powerful knights are skilled
+      in blitzkrieg strikes that can decapitate armies or nations, frequently
+      winning battles or wars with little to no bloodshed.
+  church_of_michael:
+    name: "The Church of Michael"
+    description: |
+      Followers of the archangel Michael, the Guardian, the Church of Michael
+      dedicates itself to the protection of the innocent and the destruction of
+      evil, especially the supernatural evil wrought by demons, sorcerers, and
+      the undead.
