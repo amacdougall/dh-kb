@@ -4,7 +4,7 @@ class Character
   include DataMapper::Resource
 
   EXPOSED = [:city, :region, :groups]
-g
+
   property :id, Serial
   property :name, String, :required => true
   property :description, Text

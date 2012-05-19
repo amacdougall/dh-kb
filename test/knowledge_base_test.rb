@@ -1,4 +1,4 @@
-require "./knowledge_base"
+require "knowledge_base"
 require "rack/test"
 require "json"
 require "yaml"
@@ -20,7 +20,7 @@ class TestKnowledgeBase < MiniTest::Unit::TestCase
   end
 
   def setup
-    @prefab = YAML.load(File.open("test_data.yml"))
+    @prefab = YAML.load(File.open("test/test_data.yml"))
 
     @dekar = Character.create @prefab["characters"]["dekar"] # implies save()
 
@@ -91,7 +91,7 @@ class TestKnowledgeBase < MiniTest::Unit::TestCase
 
     assert last_response.ok?
     character = Character.first :name.like => "Poya Kern"
-    assert_equal "Poya Kern", character.andand.nameg
+    assert_equal "Poya Kern", character.andand.name
     assert_match /Knight Blade of Heaven/, character.andand.description
     character.destroy
   end
@@ -172,7 +172,7 @@ class TestKnowledgeBase < MiniTest::Unit::TestCase
 
     assert last_response.ok?
     city = City.first :name.like => "Ilium"
-    assert_equal "Ilium", city.andand.nameg
+    assert_equal "Ilium", city.andand.name
     assert_match /A city of the Silver Coast/, city.andand.description
     city.destroy
   end
@@ -224,7 +224,7 @@ class TestKnowledgeBase < MiniTest::Unit::TestCase
 
     assert last_response.ok?
     region = Region.first :name.like => "%Silver Coast%"
-    assert_equal "The Silver Coast", region.andand.nameg
+    assert_equal "The Silver Coast", region.andand.name
     region.destroy
   end
 
@@ -275,7 +275,7 @@ class TestKnowledgeBase < MiniTest::Unit::TestCase
 
     assert last_response.ok?
     group = Group.first :name.like => "%Church of Michael%"
-    assert_equal "The Church of Michael", group.andand.nameg
+    assert_equal "The Church of Michael", group.andand.name
     group.destroy
   end
 

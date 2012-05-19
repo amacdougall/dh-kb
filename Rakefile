@@ -5,10 +5,10 @@ task :default => [:run]
 
 task :run do
   ENV['RACK_ENV'] = "dev"
-  system "shotgun knowledge_base.rb"
+  system "shotgun -Iapp app/knowledge_base.rb"
 end
 
 task :test do
   ENV["RACK_ENV"] = "test"
-  system "ruby knowledge_base_test.rb"
+  system "ruby -Iapp test/knowledge_base_test.rb"
 end

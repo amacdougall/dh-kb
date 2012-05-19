@@ -1,10 +1,13 @@
 require "sinatra"
 require "data_mapper"
+
+require "models/models"
+
+require "haml"
+require "rdiscount"
+
 require "andand"
 
-require "./models"
-
-# enable runtime debugging with pry
 require "pry"
 require "pry-nav"
 require "pry-stack_explorer"
@@ -12,6 +15,8 @@ require "pry-stack_explorer"
 
 configure :production do
   DataMapper.setup :default, ENV["DATABASE_URL"] # set by Heroku
+  DataMapper.finalize
+  DataMapper.auto_upgrade!
 end
 
 configure :dev do
@@ -19,36 +24,25 @@ configure :dev do
   DataMapper::Logger.new $stdout, :debug
   DataMapper::Model.raise_on_save_failure = true
   DataMapper.setup :default, "postgres://dragonhunt:darketernal@localhost/dh-kb"
+  DataMapper.finalize
+  DataMapper.auto_upgrade! # attempts not to lose data
 end
 
 configure :test do
   puts "Configuring for test environment."
   DataMapper::Model.raise_on_save_failure = true
   DataMapper.setup :default, "postgres://dragonhunt:darketernal@localhost/dh-kb-test"
+  DataMapper.finalize
+  DataMapper.auto_migrate! # destroys all data
 end
 
-DataMapper.finalize
-DataMapper.auto_migrate!
+# this file is in ${SITE_ROOT}/app, serve static files from ${SITE_ROOT}/public
+set :public_folder, File.join(File.dirname(__FILE__), "/../public")
 
-# Return a usage page.
+# Return bootstrap page for knowledge base.
+# TODO: load from external file
 get "/" do
-  <<-EOM
-  <html>
-    <head>
-      <title>Usage page.</title>
-    </head>
-    <body>
-      <h1>API Usage Instructions</h1>
-      <p>This API recognizes the following commands:</p>
-      <ul>
-        <li><b>GET</b> <pre>/character/:id</pre> Retrieve the character with the supplied id or name.</li>
-        <li><b>POST</b> <pre>/character</pre> Create a character; must supply valid character in body as JSON.</li>
-        <li><b>PUT</b> <pre>/character/:id</pre> Update the character with the supplied id.</li>
-        <li><b>DELETE</b> <pre>/character/:id</pre> Delete the character with the supplied id. Does not accept a string name.</li>
-      </ul>
-    </body>
-  </html>
-  EOM
+  haml :index
 end
 
 # Characters
@@ -85,7 +79,7 @@ put "/character/:id" do |id|
   character = Character.get id
   character.name = params["name"]
   character.description = params["description"]
-g
+
   # handle city association
   if params["city"]
     character.city = City.get params["city"]["id"]

@@ -1,0 +1,26 @@
+%html
+  %head
+    %title Usage page.
+    %script{src: "javascript/lib/jquery-1.7.1.min.js"}
+    %script{src: "javascript/lib/underscore-min.js"}
+    %script{src: "javascript/main.js"}
+    / %link{rel: "stylesheet", href: "stylesheets/main.css"}
+  %body
+    %h1 API Usage Instructions
+    %p This API recognizes the following commands:
+    %ul
+      %li
+        :markdown
+          **GET** `/character/:id` Retrieve the character with the supplied id
+          or name.
+      %li
+        :markdown
+          **POST** `/character` Create a character; must supply valid character
+          in body as JSON.
+      %li
+        :markdown
+          **PUT** `/character/:id` Update the character with the supplied id.
+      %li
+        :markdown
+          **DELETE** `/character/:id` Delete the character with the supplied
+          id. Does not accept a string name.
