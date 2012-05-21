@@ -1,4 +1,5 @@
 dh-kb
 =====
 
-Dragonhunt knowledge base made with Sinatra and Backbone.js
+Dragonhunt knowledge base made with Rails and backbone.js.
+
