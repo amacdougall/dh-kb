@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521203202) do
+ActiveRecord::Schema.define(:version => 20120526185912) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "city_id"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20120521203202) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "region_id"
@@ -37,14 +37,14 @@ ActiveRecord::Schema.define(:version => 20120521203202) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "regions", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
