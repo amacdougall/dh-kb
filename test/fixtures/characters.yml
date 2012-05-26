@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
+dekar:
+  name: Dekar Raviede
+  description: First Lune Knight of Heaven.
 
-two:
-  name: MyString
-  description: MyString
+danae:
+  name: Danae Sparrling
+  description: Second Lune Knight of Heaven.
