@@ -1,12 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @region.name
-%p
-  %b Description:
-  = @region.description
+.entity
+  %h2= @region.name
+  %p= @region.description
 
-= link_to 'Edit', edit_region_path(@region)
-\|
-= link_to 'Back', regions_path
+  .actions
+    = link_to 'Edit', edit_region_path(@region)
+    = link_to 'Back', regions_path

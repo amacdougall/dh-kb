@@ -1,21 +1,14 @@
-%h1 Listing groups
+%h1 Groups
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
-
+.entities
   - @groups.each do |group|
-    %tr
-      %td= group.name
-      %td= group.description
-      %td= link_to 'Show', group
-      %td= link_to 'Edit', edit_group_path(group)
-      %td= link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
+    .entity
+      %h2= group.name
+      %p= group.description
+      .actions
+        = link_to 'Show', group
+        = link_to 'Edit', edit_group_path(group)
+        = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
 
-%br
-
-= link_to 'New Group', new_group_path
+  %div.actions
+    = link_to 'New Group', new_group_path

@@ -1,12 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @group.name
-%p
-  %b Description:
-  = @group.description
+.entity
+  %h2= @group.name
+  %p= @group.description
 
-= link_to 'Edit', edit_group_path(@group)
-\|
-= link_to 'Back', groups_path
+  .actions
+    = link_to 'Edit', edit_group_path(@group)
+    = link_to 'Back', groups_path

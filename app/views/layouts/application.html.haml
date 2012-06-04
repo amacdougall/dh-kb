@@ -2,8 +2,25 @@
 %html
   %head
   %title Dragonhunt Knowledge Base
+  %link{type: 'text/css', rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Brawler'}
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
 
-= yield
+.header
+  .banner
+    %h1 Dragonhunt Knowledge Base
+    %p All the people and places of the Dragonhunt world, at your fingertips, so to speak.
+
+  .menu
+    %h2
+      = link_to_unless_current "Characters", characters_path
+    %h2
+      = link_to_unless_current "Cities", cities_path
+    %h2
+      = link_to_unless_current "Regions", regions_path
+    %h2
+      = link_to_unless_current "Groups", groups_path
+
+.main
+  = yield

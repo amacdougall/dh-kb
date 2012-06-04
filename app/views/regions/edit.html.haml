@@ -1,7 +1,8 @@
 %h1 Editing region
 
-= render 'form'
+.form
+  = render 'form'
 
-= link_to 'Show', @region
-\|
-= link_to 'Back', regions_path
+.actions
+  = link_to 'Show', @region
+  = link_to 'Back', regions_path

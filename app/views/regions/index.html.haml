@@ -1,21 +1,14 @@
-%h1 Listing regions
+%h1 Regions
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
-
+.entities
   - @regions.each do |region|
-    %tr
-      %td= region.name
-      %td= region.description
-      %td= link_to 'Show', region
-      %td= link_to 'Edit', edit_region_path(region)
-      %td= link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
+    .entity
+      %h2= region.name
+      %p= region.description
+      .actions
+        = link_to 'Show', region
+        = link_to 'Edit', edit_region_path(region)
+        = link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
 
-%br
-
-= link_to 'New Region', new_region_path
+  %div.actions
+    = link_to 'New Region', new_region_path

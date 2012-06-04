@@ -1,0 +1,203 @@
+/* line 17, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Brawler";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Brawler");
+  src: url("fonts/Brawler.woff") format("woff");
+}
+
+/* line 4, ../../app/assets/stylesheets/screen.css.sass */
+div.header {
+  margin-bottom: 40px;
+}
+/* line 6, ../../app/assets/stylesheets/screen.css.sass */
+div.header div.banner {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0 20px 10px;
+}
+/* line 10, ../../app/assets/stylesheets/screen.css.sass */
+div.header div.banner h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+/* line 14, ../../app/assets/stylesheets/screen.css.sass */
+div.header div.menu {
+  background-color: #cccccc;
+  padding: 15px 0 15px 10px;
+}
+/* line 17, ../../app/assets/stylesheets/screen.css.sass */
+div.header div.menu h2 {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: white;
+  padding: 0.5em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 25, ../../app/assets/stylesheets/screen.css.sass */
+div.main {
+  margin-left: 50px;
+}
+
+/* line 29, ../../app/assets/stylesheets/screen.css.sass */
+body {
+  background-color: white;
+  color: #333333;
+  font-family: "Brawler", "Georgia", "Palatino", "serif";
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+/* line 34, ../../app/assets/stylesheets/screen.css.sass */
+h1 {
+  font-size: 40px;
+  line-height: 54px;
+  margin-bottom: 20px;
+}
+
+/* line 39, ../../app/assets/stylesheets/screen.css.sass */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* line 43, ../../app/assets/stylesheets/screen.css.sass */
+p, ol, ul, td {
+  font-family: "Brawler", "Georgia", "Palatino", "serif";
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+/* line 46, ../../app/assets/stylesheets/screen.css.sass */
+pre {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* line 51, ../../app/assets/stylesheets/screen.css.sass */
+a {
+  color: #003366;
+  text-decoration: none;
+}
+/* line 54, ../../app/assets/stylesheets/screen.css.sass */
+a:visited {
+  color: #666666;
+}
+/* line 56, ../../app/assets/stylesheets/screen.css.sass */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 60, ../../app/assets/stylesheets/screen.css.sass */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 63, ../../app/assets/stylesheets/screen.css.sass */
+#notice {
+  color: green;
+}
+
+/* line 66, ../../app/assets/stylesheets/screen.css.sass */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 71, ../../app/assets/stylesheets/screen.css.sass */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 78, ../../app/assets/stylesheets/screen.css.sass */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #cc0000;
+  color: white;
+}
+/* line 87, ../../app/assets/stylesheets/screen.css.sass */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

@@ -1,0 +1,37 @@
+// styles used to list, show, and edit all entities, such as characters,
+// cities, regions, and groups
+@import base
+
+div.entity
+  margin-bottom: 2em
+  p
+    margin-bottom: 1em
+div.actions
+  margin-top: 20px
+  a
+    display: inline-block
+    background-color: #eee
+    padding: 5px 20px
+    @include border-radius()
+
+div.form
+  $labelWidth: 120px
+  margin-top: 20px
+
+  div.field
+    label
+      width: $labelWidth
+      padding-right: 20px
+      font-weight: bold
+      margin-top: 5px
+      text-align: right
+    label, input, textarea
+      display: inline-block
+      vertical-align: top
+    input, textarea
+      width: 400px
+      border: medium silver solid
+      @include contentFont
+
+  div.actions
+    margin-left: $labelWidth + 25px

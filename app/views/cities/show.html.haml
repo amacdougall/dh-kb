@@ -1,12 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @city.name
-%p
-  %b Description:
-  = @city.description
+.entity
+  %h2= @city.name
+  %p= @city.description
 
-= link_to 'Edit', edit_city_path(@city)
-\|
-= link_to 'Back', cities_path
+  .actions
+    = link_to 'Edit', edit_city_path(@city)
+    = link_to 'Back', cities_path

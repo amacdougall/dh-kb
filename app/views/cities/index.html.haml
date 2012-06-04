@@ -1,21 +1,14 @@
-%h1 Listing cities
+%h1 Cities
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
-
+.entities
   - @cities.each do |city|
-    %tr
-      %td= city.name
-      %td= city.description
-      %td= link_to 'Show', city
-      %td= link_to 'Edit', edit_city_path(city)
-      %td= link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete
+    .entity
+      %h2= city.name
+      %p= city.description
+      .actions
+        = link_to 'Show', city
+        = link_to 'Edit', edit_city_path(city)
+        = link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete
 
-%br
-
-= link_to 'New City', new_city_path
+  %div.actions
+    = link_to 'New City', new_city_path
