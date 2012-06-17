@@ -2,7 +2,15 @@
 
 .entity
   %h2= @region.name
-  %p= @region.description
+  %div
+    :markdown
+      #{@region.description}
+
+  - unless @region.cities.empty?
+    %h3 Cities
+    %ul
+    - @region.cities.each do |city|
+      %li= link_to city.name, city
 
   .actions
     = link_to 'Edit', edit_region_path(@region)

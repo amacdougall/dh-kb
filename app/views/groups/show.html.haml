@@ -2,7 +2,15 @@
 
 .entity
   %h2= @group.name
-  %p= @group.description
+  %div
+    :markdown
+      #{@group.description}
+
+  - unless @group.characters.empty?
+    %h3 Members
+    %ul
+    - @group.characters.each do |character|
+      %li= link_to character.name, character
 
   .actions
     = link_to 'Edit', edit_group_path(@group)

@@ -2,7 +2,10 @@
 
 .entity
   %h2= @city.name
-  %p= @city.description
+  %h3= link_to @city.region.name, @city.region
+  %div
+    :markdown
+      #{@city.description}
 
   .actions
     = link_to 'Edit', edit_city_path(@city)
