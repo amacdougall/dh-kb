@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'haml-rails'
-# gem 'yaml'
+gem 'rdiscount'
+# gem 'yaml' # not actually named that?
 
+gem 'andand'
 
 # Gems used only for assets and not required
 # in production environments by default.
