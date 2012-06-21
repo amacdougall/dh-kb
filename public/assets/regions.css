@@ -73,18 +73,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 5, ../../app/assets/stylesheets/_entities.sass */
 div.entity {
+  margin-right: 10%;
   margin-bottom: 2em;
 }
-/* line 7, ../../app/assets/stylesheets/_entities.sass */
+/* line 8, ../../app/assets/stylesheets/_entities.sass */
 div.entity p {
   margin-bottom: 1em;
 }
 
-/* line 9, ../../app/assets/stylesheets/_entities.sass */
+/* line 10, ../../app/assets/stylesheets/_entities.sass */
 div.actions {
   margin-top: 20px;
 }
-/* line 11, ../../app/assets/stylesheets/_entities.sass */
+/* line 12, ../../app/assets/stylesheets/_entities.sass */
 div.actions a {
   display: inline-block;
   background-color: #eeeeee;
@@ -96,11 +97,11 @@ div.actions a {
   border-radius: 5px;
 }
 
-/* line 17, ../../app/assets/stylesheets/_entities.sass */
+/* line 18, ../../app/assets/stylesheets/_entities.sass */
 div.form {
   margin-top: 20px;
 }
-/* line 22, ../../app/assets/stylesheets/_entities.sass */
+/* line 23, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field label {
   width: 120px;
   padding-right: 20px;
@@ -108,12 +109,12 @@ div.form div.field label {
   margin-top: 5px;
   text-align: right;
 }
-/* line 28, ../../app/assets/stylesheets/_entities.sass */
+/* line 29, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field label, div.form div.field input, div.form div.field textarea {
   display: inline-block;
   vertical-align: top;
 }
-/* line 31, ../../app/assets/stylesheets/_entities.sass */
+/* line 32, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field input, div.form div.field textarea {
   width: 400px;
   border: medium silver solid;
@@ -121,7 +122,7 @@ div.form div.field input, div.form div.field textarea {
   font-size: 18px;
   line-height: 1.5em;
 }
-/* line 36, ../../app/assets/stylesheets/_entities.sass */
+/* line 37, ../../app/assets/stylesheets/_entities.sass */
 div.form div.actions {
   margin-left: 145px;
 }

@@ -2,14 +2,14 @@
 %html
   %head
   %title Dragonhunt Knowledge Base
-  %link{type: 'text/css', rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Brawler'}
+  %link{type: "text/css", rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Brawler"}
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
 
 .header
   .banner
-    %h1 Dragonhunt Knowledge Base
+    %h1= link_to "Dragonhunt Knowledge Base", :action => "index"
     %p All the people and places of the Dragonhunt world, at your fingertips, so to speak.
 
   .menu
