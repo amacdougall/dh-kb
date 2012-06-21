@@ -7,12 +7,16 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the default SQLite database.
+# Ignore the default SQLite database and backups
 /db/*.sqlite3
+/db/*.sql.gz
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore dummy data
+/dummy_data
 
 # Ignore Sass temp files
 .sass-cache
