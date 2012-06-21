@@ -2,11 +2,27 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+    # @cities = City.all
+    regions = Region.all
+    cities = City.all
+    @cities_by_region = []
+
+    regions.each do |region|
+      region_cities = cities.select {|city| city.region_id == region.id}
+      unless region_cities.empty?
+        @cities_by_region << {name: region.name, cities: region_cities}
+      end
+
+    end
+
+    @cities_by_region << {
+      name: "Uncategorized",
+      cities: cities.select {|city| city.region_id.nil?}
+    }
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @cities }
+      format.json { render json: @cities_by_region }
     end
   end
 
