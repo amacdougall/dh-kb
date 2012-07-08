@@ -14,15 +14,11 @@
     = f.text_area :description
   .field
     = f.label :city
-    = collection_select :character, :city_id, City.all, :id, :name,
-        :prompt => true, :include_blank => true
-  .field
-    = f.label :region
-    = collection_select :character, :region_id, Region.all, :id, :name,
+    = collection_select :character, :city_id, City.order("name"), :id, :name,
         :prompt => true, :include_blank => true
   .field
     = f.label :group
-    = collection_select :character, :group_ids, Group.all, :id, :name,
+    = collection_select :character, :group_ids, Group.order("name"), :id, :name,
         {prompt: true, include_blank: true},
         {multiple: true, size: [Group.all.length, 10].min}
   .actions
