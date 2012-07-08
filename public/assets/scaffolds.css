@@ -63,6 +63,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 7, ../../app/assets/stylesheets/_base.sass */
+ol {
+  list-style: decimal;
+}
+
 @font-face {
   font-family: "Brawler";
   font-style: normal;

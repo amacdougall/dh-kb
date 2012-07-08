@@ -1,14 +1,17 @@
 %h1 Characters
 
-.entities
-  - @characters.each do |character|
-    .entity
-      %h2= character.name
-      %p= character.description
-      .actions
-        = link_to 'Show', character
-        = link_to 'Edit', edit_character_path(character)
-        = link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete
+= render "shared/quick_search"
 
-  %div.actions
+.entities
+  .section
+    - @characters.each do |character|
+      .entity
+        %h2.name= character.name
+        %p= character.description
+        .actions
+          = link_to 'Show', character
+          = link_to 'Edit', edit_character_path(character)
+          = link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete
+
+  .actions
     = link_to 'New Character', new_character_path

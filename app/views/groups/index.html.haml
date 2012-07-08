@@ -1,14 +1,17 @@
 %h1 Groups
 
+= render "shared/quick_search"
+
 .entities
-  - @groups.each do |group|
-    .entity
-      %h2= group.name
-      %p= group.description
-      .actions
-        = link_to 'Show', group
-        = link_to 'Edit', edit_group_path(group)
-        = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
+  .section
+    - @groups.each do |group|
+      .entity
+        %h2.name= group.name
+        %p= group.description
+        .actions
+          = link_to 'Show', group
+          = link_to 'Edit', edit_group_path(group)
+          = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
 
   %div.actions
     = link_to 'New Group', new_group_path

@@ -63,6 +63,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 7, ../../app/assets/stylesheets/_base.sass */
+ol {
+  list-style: decimal;
+}
+
 @font-face {
   font-family: "Brawler";
   font-style: normal;
@@ -80,12 +85,29 @@ div.entity {
 div.entity p {
   margin-bottom: 1em;
 }
-
 /* line 10, ../../app/assets/stylesheets/_entities.sass */
+div.entity h1 {
+  font-size: 40px;
+  border-bottom: thin black solid;
+}
+/* line 13, ../../app/assets/stylesheets/_entities.sass */
+div.entity h2 {
+  font-size: 34px;
+}
+/* line 15, ../../app/assets/stylesheets/_entities.sass */
+div.entity h3 {
+  font-size: 26px;
+}
+/* line 17, ../../app/assets/stylesheets/_entities.sass */
+div.entity div.children {
+  margin-left: 1em;
+}
+
+/* line 21, ../../app/assets/stylesheets/_entities.sass */
 div.actions {
   margin-top: 20px;
 }
-/* line 12, ../../app/assets/stylesheets/_entities.sass */
+/* line 23, ../../app/assets/stylesheets/_entities.sass */
 div.actions a {
   display: inline-block;
   background-color: #eeeeee;
@@ -97,11 +119,25 @@ div.actions a {
   border-radius: 5px;
 }
 
-/* line 18, ../../app/assets/stylesheets/_entities.sass */
+/* line 29, ../../app/assets/stylesheets/_entities.sass */
+div.quick-search {
+  margin-right: 10%;
+  margin-bottom: 2em;
+  padding: 10px;
+  background-color: #eeeeee;
+}
+/* line 34, ../../app/assets/stylesheets/_entities.sass */
+div.quick-search input[type=text] {
+  font-family: Geneva, Verdana, "Lucida Sans", sans-serif;
+  font-size: 24px;
+  width: 100%;
+}
+
+/* line 38, ../../app/assets/stylesheets/_entities.sass */
 div.form {
   margin-top: 20px;
 }
-/* line 23, ../../app/assets/stylesheets/_entities.sass */
+/* line 43, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field label {
   width: 120px;
   padding-right: 20px;
@@ -109,12 +145,12 @@ div.form div.field label {
   margin-top: 5px;
   text-align: right;
 }
-/* line 29, ../../app/assets/stylesheets/_entities.sass */
+/* line 49, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field label, div.form div.field input, div.form div.field textarea {
   display: inline-block;
   vertical-align: top;
 }
-/* line 32, ../../app/assets/stylesheets/_entities.sass */
+/* line 52, ../../app/assets/stylesheets/_entities.sass */
 div.form div.field input, div.form div.field textarea {
   width: 400px;
   border: medium silver solid;
@@ -122,7 +158,7 @@ div.form div.field input, div.form div.field textarea {
   font-size: 18px;
   line-height: 1.5em;
 }
-/* line 37, ../../app/assets/stylesheets/_entities.sass */
+/* line 57, ../../app/assets/stylesheets/_entities.sass */
 div.form div.actions {
   margin-left: 145px;
 }

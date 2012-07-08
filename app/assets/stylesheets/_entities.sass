@@ -7,6 +7,17 @@ div.entity
   margin-bottom: 2em
   p
     margin-bottom: 1em
+  h1
+    font-size: 40px
+    border-bottom: thin black solid
+  h2
+    font-size: 34px
+  h3
+    font-size: 26px
+  div.children
+    margin-left: 1em
+
+
 div.actions
   margin-top: 20px
   a
@@ -14,6 +25,15 @@ div.actions
     background-color: #eee
     padding: 5px 20px
     @include border-radius()
+
+div.quick-search
+  margin-right: 10%
+  margin-bottom: 2em
+  padding: 10px
+  background-color: #eee
+  input[type=text]
+    @include quickSearchFont
+    width: 100%
 
 div.form
   $labelWidth: 120px

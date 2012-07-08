@@ -1,16 +1,20 @@
 %p#notice= notice
 
 .entity
-  %h2= @region.name
+  %h1= @region.name
   %div
     :markdown
       #{@region.description}
 
-  - unless @region.cities.empty?
-    %h3 Cities
-    %ul
-    - @region.cities.each do |city|
-      %li= link_to city.name, city
+  - if @region.cities.present?
+    %h2 Cities
+    %div.children
+      - @region.cities.each do |city|
+        %h3= link_to city.name, city
+        %div.children
+          - city.characters.each do |character|
+            %h4= link_to character.name, character
+
 
   .actions
     = link_to 'Edit', edit_region_path(@region)

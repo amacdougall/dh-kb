@@ -1,14 +1,17 @@
 %h1 Regions
 
+= render "shared/quick_search"
+
 .entities
-  - @regions.each do |region|
-    .entity
-      %h2= region.name
-      %p= region.description
-      .actions
-        = link_to 'Show', region
-        = link_to 'Edit', edit_region_path(region)
-        = link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
+  .section
+    - @regions.each do |region|
+      .entity
+        %h2.name= region.name
+        %p= region.description
+        .actions
+          = link_to 'Show', region
+          = link_to 'Edit', edit_region_path(region)
+          = link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
 
   %div.actions
     = link_to 'New Region', new_region_path
