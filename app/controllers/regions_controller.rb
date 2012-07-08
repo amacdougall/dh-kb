@@ -2,7 +2,7 @@ class RegionsController < ApplicationController
   # GET /regions
   # GET /regions.json
   def index
-    @regions = Region.all
+    @regions = Region.order "name"
 
     respond_to do |format|
       format.html # index.html.erb

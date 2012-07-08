@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
   # GET /characters
   # GET /characters.json
   def index
-    @characters = Character.all
+    @characters = Character.order "name"
 
     respond_to do |format|
       format.html # index.html.erb

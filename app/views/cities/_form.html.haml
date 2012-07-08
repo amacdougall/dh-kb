@@ -14,7 +14,7 @@
     = f.text_area :description
   .field
     = f.label :region
-    = collection_select :city, :region_id, Region.all, :id, :name,
+    = collection_select :city, :region_id, Region.order("name"), :id, :name,
         :prompt => true, :include_blank => true
   .actions
     = f.submit 'Save'
