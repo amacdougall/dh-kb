@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'thin'
 gem 'pg', '~> 0.11'
 gem 'haml-rails'
 gem 'rdiscount'
