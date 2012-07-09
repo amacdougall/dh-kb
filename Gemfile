@@ -23,7 +23,6 @@ gem 'jquery-rails'
 gem 'pry'
 gem 'pry-nav'
 gem 'pry-stack_explorer'
-gem 'pry-coolline'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
