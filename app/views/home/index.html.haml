@@ -1,1 +1,7 @@
-%h1 Index page content!
+%h1 This is the index page!
+
+- if session[:authenticated]
+  %div
+    :markdown
+      You now have the ability to edit articles. Use this power only for good,
+      never for evil.

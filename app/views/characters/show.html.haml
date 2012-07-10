@@ -17,5 +17,6 @@
       %li= link_to group.name, group
 
   .actions
-    = link_to 'Edit', edit_character_path(@character)
+    - if session[:authenticated]
+      = link_to 'Edit', edit_character_path(@character)
     = link_to 'Back', characters_path

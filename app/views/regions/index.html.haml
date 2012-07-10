@@ -10,8 +10,10 @@
         %p= region.description
         .actions
           = link_to 'Show', region
-          = link_to 'Edit', edit_region_path(region)
-          = link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
+          - if session[:authenticated]
+            = link_to 'Edit', edit_region_path(region)
+            = link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
 
-  %div.actions
-    = link_to 'New Region', new_region_path
+  - if session[:authenticated]
+    .actions
+      = link_to 'New Region', new_region_path

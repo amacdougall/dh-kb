@@ -1,18 +1,19 @@
 %p#notice= notice
 
 .entity
-  %h2= @city.name
-  %h3= link_to @city.region.name, @city.region
+  %h1= @city.name
+  %h2= link_to @city.region.name, @city.region
   %div
     :markdown
       #{@city.description}
 
-  %div
+  .children
     %h3 Characters
     %ul
     - @city.characters.each do |character|
       %li= link_to character.name, character
 
   .actions
-    = link_to 'Edit', edit_city_path(@city)
+    - if session[:authenticated]
+      = link_to 'Edit', edit_city_path(@city)
     = link_to 'Back', cities_path

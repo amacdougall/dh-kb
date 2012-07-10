@@ -4,7 +4,8 @@ KnowledgeBase::Application.routes.draw do
   resources :cities
   resources :groups
 
-  get "home/index"
+  match "home/index" => "home#index", :via => :get, :as => :home
+  match "home/index/:password" => "home#index", :via => :get
 
   root :to => 'home#index'
 end

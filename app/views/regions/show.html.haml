@@ -8,14 +8,15 @@
 
   - if @region.cities.present?
     %h2 Cities
-    %div.children
+    .children
       - @region.cities.each do |city|
         %h3= link_to city.name, city
-        %div.children
+        .children
           - city.characters.each do |character|
             %h4= link_to character.name, character
 
 
   .actions
-    = link_to 'Edit', edit_region_path(@region)
+    - if session[:authenticated]
+      = link_to 'Edit', edit_region_path(@region)
     = link_to 'Back', regions_path

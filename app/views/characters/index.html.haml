@@ -10,8 +10,10 @@
         %p= character.description
         .actions
           = link_to 'Show', character
-          = link_to 'Edit', edit_character_path(character)
-          = link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete
+          - if session[:authenticated]
+            = link_to 'Edit', edit_character_path(character)
+            = link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete
 
-  .actions
-    = link_to 'New Character', new_character_path
+  - if session[:authenticated]
+    .actions
+      = link_to 'New Character', new_character_path
