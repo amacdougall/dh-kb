@@ -7,7 +7,7 @@
     - @characters.each do |character|
       .entity
         %h2.name= character.name
-        %p= character.description
+        %p= character.short_description
         .actions
           = link_to 'Show', character
           - if session[:authenticated]
