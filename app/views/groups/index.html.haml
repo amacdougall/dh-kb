@@ -7,7 +7,9 @@
     - @groups.each do |group|
       .entity
         %h2.name= group.name
-        %p= group.description
+        %p
+          :markdown
+            #{group.short_description}
         .actions
           = link_to 'Show', group
           - if session[:authenticated]

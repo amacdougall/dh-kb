@@ -148,44 +148,54 @@ p, ol, ul, td {
 }
 
 /* line 48, ../../app/assets/stylesheets/screen.css.sass */
+em, i {
+  font-style: italic;
+}
+
+/* line 51, ../../app/assets/stylesheets/screen.css.sass */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 54, ../../app/assets/stylesheets/screen.css.sass */
 pre {
   background-color: #eeeeee;
   padding: 10px;
   font-size: 18px;
 }
 
-/* line 53, ../../app/assets/stylesheets/screen.css.sass */
+/* line 59, ../../app/assets/stylesheets/screen.css.sass */
 a {
   color: #003366;
   text-decoration: none;
 }
-/* line 56, ../../app/assets/stylesheets/screen.css.sass */
+/* line 62, ../../app/assets/stylesheets/screen.css.sass */
 a:visited {
   color: #666666;
 }
-/* line 58, ../../app/assets/stylesheets/screen.css.sass */
+/* line 64, ../../app/assets/stylesheets/screen.css.sass */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 62, ../../app/assets/stylesheets/screen.css.sass */
+/* line 68, ../../app/assets/stylesheets/screen.css.sass */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 65, ../../app/assets/stylesheets/screen.css.sass */
+/* line 71, ../../app/assets/stylesheets/screen.css.sass */
 #notice {
   color: green;
 }
 
-/* line 68, ../../app/assets/stylesheets/screen.css.sass */
+/* line 74, ../../app/assets/stylesheets/screen.css.sass */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 73, ../../app/assets/stylesheets/screen.css.sass */
+/* line 79, ../../app/assets/stylesheets/screen.css.sass */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -194,7 +204,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 80, ../../app/assets/stylesheets/screen.css.sass */
+/* line 86, ../../app/assets/stylesheets/screen.css.sass */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -205,7 +215,7 @@ div.field, div.actions {
   background-color: #cc0000;
   color: white;
 }
-/* line 89, ../../app/assets/stylesheets/screen.css.sass */
+/* line 95, ../../app/assets/stylesheets/screen.css.sass */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;

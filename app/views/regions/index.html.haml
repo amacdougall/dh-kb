@@ -7,7 +7,9 @@
     - @regions.each do |region|
       .entity
         %h2.name= region.name
-        %p= region.description
+        %p
+          :markdown
+            #{region.short_description}
         .actions
           = link_to 'Show', region
           - if session[:authenticated]

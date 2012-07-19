@@ -1,4 +1,6 @@
 class City < ActiveRecord::Base
+  include EntityBehavior
+
   attr_accessible :description, :name, :region_id
 
   belongs_to :region
