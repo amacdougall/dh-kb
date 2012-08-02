@@ -5,7 +5,7 @@ module EntityBehavior
   # to find the end of the first sentence, it displays a 25-word excerpt
   # followed by an ellipsis.
   def short_description
-    terminator = description.match /[.?!]['"]? /
+    terminator = description.match /[.?!]['"]?($| )/
 
     if not terminator.nil?
       description[0..terminator.offset(0).first]
