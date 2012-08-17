@@ -9,7 +9,7 @@
         %h2.name= character.name
         %p
           :markdown
-            #{character.short_description}
+            #{character.short_description_markdown}
         .actions
           = link_to 'Show', character
           - if session[:authenticated]

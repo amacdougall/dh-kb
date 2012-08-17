@@ -9,7 +9,7 @@
         %h2.name= group.name
         %p
           :markdown
-            #{group.short_description}
+            #{group.short_description_markdown}
         .actions
           = link_to 'Show', group
           - if session[:authenticated]

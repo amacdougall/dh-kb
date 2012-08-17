@@ -13,4 +13,27 @@ module EntityBehavior
       description.split(" ")[0..25].join(" ") + "..."
     end
   end
+
+  # Returns the entity's description, with mention tags converted to Markdown
+  # links. Mention tags take the following format: @[name][type:id], where the
+  # type is the lowercase plural of the model class name.
+  def description_markdown
+    tags_to_links description
+  end
+
+  # Returns the entity's shortened description, with mention tags converted to
+  # Markdown links. Mention tags take the following format: @[name][type:id],
+  # where the type is the lowercase plural of the model class name.
+  def short_description_markdown
+    tags_to_links short_description
+  end
+
+
+  private
+  # Returns the supplied text, with mention tags converted to Markdown links.
+  # Mention tags take the following format: @[name][type:id], where the type is
+  # the lowercase plural of the model class name.
+  def tags_to_links(text)
+    text.gsub /@\[([^\]]+)\]\((\w+)\:(\d+)\)/, "[\\1](/\\2/\\3)"
+  end
 end

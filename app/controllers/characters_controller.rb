@@ -1,4 +1,4 @@
-class CharactersController < ApplicationController
+class CharactersController < EntitiesController
   # GET /characters
   # GET /characters.json
   def index
@@ -25,6 +25,7 @@ class CharactersController < ApplicationController
   # GET /characters/new.json
   def new
     @character = Character.new
+    @completions = completions
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class CharactersController < ApplicationController
   # GET /characters/1/edit
   def edit
     @character = Character.find(params[:id])
+    @completions = completions
   end
 
   # POST /characters

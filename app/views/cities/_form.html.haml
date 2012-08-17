@@ -1,3 +1,5 @@
+= render 'shared/entity_completions'
+
 = form_for @city do |f|
   -if @city.errors.any?
     #error_explanation
@@ -6,12 +8,14 @@
         - @city.errors.full_messages.each do |msg|
           %li= msg
 
+  %input{:type => "hidden", :id => "type", :value => "city"}
   .field
     = f.label :name
     = f.text_field :name
   .field
     = f.label :description
-    = f.text_area :description
+    %textarea.mention
+    = f.hidden_field :description
   .field
     = f.label :region
     = collection_select :city, :region_id, Region.order("name"), :id, :name,

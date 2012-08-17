@@ -4,7 +4,7 @@
   %h1= @region.name
   %div
     :markdown
-      #{@region.description}
+      #{@region.description_markdown}
 
   - if @region.cities.present?
     %h2 Cities
