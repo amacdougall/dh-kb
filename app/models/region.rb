@@ -1,3 +1,5 @@
+require 'entity_behavior'
+
 class Region < ActiveRecord::Base
   include EntityBehavior
 

@@ -1,4 +1,4 @@
-class RegionsController < ApplicationController
+class RegionsController < EntitiesController
   # GET /regions
   # GET /regions.json
   def index
@@ -25,6 +25,7 @@ class RegionsController < ApplicationController
   # GET /regions/new.json
   def new
     @region = Region.new
+    @completions = completions
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class RegionsController < ApplicationController
   # GET /regions/1/edit
   def edit
     @region = Region.find(params[:id])
+    @completions = completions
   end
 
   # POST /regions

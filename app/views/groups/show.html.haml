@@ -4,7 +4,7 @@
   %h2= @group.name
   %div
     :markdown
-      #{@group.description}
+      #{@group.description_markdown}
 
   - unless @group.characters.empty?
     %h3 Members

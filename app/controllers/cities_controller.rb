@@ -1,4 +1,4 @@
-class CitiesController < ApplicationController
+class CitiesController < EntitiesController
   # GET /cities
   # GET /cities.json
   def index
@@ -25,6 +25,7 @@ class CitiesController < ApplicationController
   # GET /cities/new.json
   def new
     @city = City.new
+    @completions = completions
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class CitiesController < ApplicationController
   # GET /cities/1/edit
   def edit
     @city = City.find(params[:id])
+    @completions = completions
   end
 
   # POST /cities

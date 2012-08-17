@@ -1,3 +1,5 @@
+require 'entity_behavior'
+
 class Group < ActiveRecord::Base
   include EntityBehavior
 

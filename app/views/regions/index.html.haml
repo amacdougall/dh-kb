@@ -9,7 +9,7 @@
         %h2.name= region.name
         %p
           :markdown
-            #{region.short_description}
+            #{region.short_description_markdown}
         .actions
           = link_to 'Show', region
           - if session[:authenticated]

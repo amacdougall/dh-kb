@@ -11,7 +11,7 @@
           %h2.name= city.name
           %p
             :markdown
-              #{city.short_description}
+              #{city.short_description_markdown}
           .actions
             = link_to 'Show', city
             - if session[:authenticated]

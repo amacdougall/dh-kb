@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController
+class GroupsController < EntitiesController
   # GET /groups
   # GET /groups.json
   def index
@@ -25,6 +25,7 @@ class GroupsController < ApplicationController
   # GET /groups/new.json
   def new
     @group = Group.new
+    @completions = completions
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class GroupsController < ApplicationController
   # GET /groups/1/edit
   def edit
     @group = Group.find(params[:id])
+    @completions = completions
   end
 
   # POST /groups

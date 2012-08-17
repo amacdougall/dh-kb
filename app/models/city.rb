@@ -1,3 +1,5 @@
+require 'entity_behavior'
+
 class City < ActiveRecord::Base
   include EntityBehavior
 
