@@ -172,7 +172,7 @@
       hideAutoComplete();
 
       // Mentions & syntax message
-      var updatedMessageText = start + mention.value + ' ' + end;
+      var updatedMessageText = start + mention.value + end;
       elmInputBox.val(updatedMessageText);
       updateValues();
 
