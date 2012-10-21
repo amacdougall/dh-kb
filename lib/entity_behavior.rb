@@ -1,20 +1,5 @@
 # Behaviors common to all entity classes.
 module EntityBehavior
-  # Applies patch_unicode_apostrophes as a before_save callback.
-  def self.included(base)
-    base.class_eval do
-      before_save :patch_unicode_apostrophes
-    end
-  end
-
-  # Replaces unicode apostrophe entity literals (i.e. "&#x27;") in the name and
-  # description fields with apostrophe literals (i.e. "'"). Use as a
-  # before_save callback.
-  def patch_unicode_apostrophes
-    name.gsub! "&#x27;", "'"
-    description.gsub! "&#x27;", "'"
-  end
-
   # Returns the first sentence of the description field. Does its best to
   # handle sentences which end in quotations or parentheses. If it fails
   # to find the end of the first sentence, it displays a 25-word excerpt
