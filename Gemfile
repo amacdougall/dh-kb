@@ -19,11 +19,13 @@ group :assets do
   gem 'compass-rails' # compass extensions can go after this line
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+end
 
-gem 'pry'
-gem 'pry-nav'
-gem 'pry-stack_explorer'
+gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
